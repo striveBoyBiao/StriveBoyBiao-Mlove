@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/************************************************
+ * @authors:胡小呆
+ * @description:首页样式
+ * @date:2016-12-12
+ * @version:1.0.0
+ * @lastModified:2016-12-12
+************************************************/
+
+.index-content{
+	padding:0 1.25rem 1.429rem;
+}
+.icon-close{
+	display: none;
+}
+
+/*首页list*/
+.index-content>ul>li{
+	padding-top: 1.25rem;
+	padding-bottom: 1.071rem;
+	border-bottom: 1px solid #ccc;
+}
+
+.index-content>ul>li .article-info{
+	margin-bottom: 1.25rem;
+	line-height: 1.875rem;
+	font-size: 1.071rem;
+}
+
+.index-content>ul>li .author-index>img{
+	width: 3.75rem;
+	height: 3.75rem;
+	border-radius: 50%;
+	margin-right: 0.643rem;
+}
+
+.index-content>ul>li .article-info .date, .index-content>ul>li .article-info .tag{
+	color: #989898;
+}
+
+.index-content>ul>li .article-info .tag{
+	display: block;
+}
+
+.index-content>ul>li img.article-pic{
+	width: 24.286rem;
+	height: 12.143rem;
+	margin-bottom: 1.071rem;
+}
+
+.index-content>ul>li h3{
+	font-size: 1.0rem;
+	color: #2d353f;
+}
+
+.index-content>ul>li p{
+	font-size: 0.857rem;
+	color: #989898;
+	text-indent: 2em;
+}

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/************************************************
+ * @authors:胡小呆
+ * @description:文章详情页样式
+ * @date:2016-12-12
+ * @version:1.0.0
+ * @lastModified:2016-12-12
+************************************************/
+.article-content{
+	padding:1.25rem 1.25rem 0;
+}
+.article-info{
+	padding-bottom: 0.893rem;
+	border-bottom: 1px solid #ccc;
+}
+.article-info{
+	margin-bottom: 1.25rem;
+	line-height: 1.875rem;
+	font-size: 1.071rem;
+}
+.author-index>img{
+	width: 3.75rem;
+	height: 3.75rem;
+	border-radius: 50%;
+	margin-right: 0.643rem;
+}
+.article-info .date, .article-info .tag{
+	color: #989898;
+}
+.article-info .tag{
+	display: block;
+}
+.article-detile>h2{
+	margin-bottom: 1.429rem;
+	line-height: 1.5;
+	font-size: 1.143rem;
+	color: #2d353f;
+}
+.article-detile{
+	padding-bottom: 1.25rem;
+}
+.article-detile img{
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.qrcode{
+	margin-top: 1.607rem;
+	margin-bottom: 0.714rem;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px solid #ccc;
+	font-size: 0.857rem;
+	color: #fe2d2d;
+	text-align: center;
+}
+.qrcode img{
+	display: block;
+	margin:0 auto 0.714rem;
+	width: 7.143rem;
+	height: 7.143rem;
+}
+.article-prev,.article-next{
+	font-size: 0.857rem;
+	color: #000000;
+}
+.article-text{
+	margin-bottom: 0.536rem;
+}
+.links-title{
+	font-size: 0.916rem!important;
+	margin-bottom: 0.357rem;
+}
+.links-lists li{
+	margin-bottom: 0.179rem;
+    font-size: 0.857rem!important;
+    line-height: 1.5!important;
+}
