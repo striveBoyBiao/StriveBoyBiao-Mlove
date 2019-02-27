@@ -27,87 +27,39 @@
 		<link rel="stylesheet" type="text/css" href="/css/article.css" />
     	<link rel="stylesheet" type="text/css" href="/css/prettify.css">
 
-		<link rel="stylesheet" href="/css/author.css" />
 	</head>
 	<body>
-		<!--<nav id="nav">
-			<div class="search">
-				<input type="text" name="" value="" placeholder="" maxlength="20">
-				<i class="fr iconfont icon-search"></i>
-			</div>
-			<ul class="cf">
-				<li style="background-image: url(/images/lib/nav_bg.jpg);"><a href="/author" title="">首页</a></li>
-				<li style="background-image: url(/images/lib/nav_bg2.jpg);"><a href="/index" title="">个人专栏</a></li>
-				<li style="background-image: url(/images/lib/nav_bg3.jpg);"><a href="" title="">生活随想</a></li>
-				<li style="background-image: url(/images/lib/nav_bg.jpg);"><a href="" title="">心得笔记</a></li>
-				<li style="background-image: url(/images/lib/nav_bg2.jpg);"><a href="" title="">JAVA</a></li>
-				<li style="background-image: url(/images/lib/nav_bg3.jpg);"><a href="" title="">C&C++</a></li>
-				<li style="background-image: url(/images/lib/nav_bg.jpg);"><a href="" title="">大数据</a></li>
-				<li style="background-image: url(/images/lib/nav_bg2.jpg);"><a href="" title="">区块链</a></li>
-				<li style="background-image: url(/images/lib/nav_bg3.jpg);"><a href="" title="">黑客</a></li>
-				<li style="background-image: url(/images/lib/nav_bg.jpg);"><a href="" title="">人工智能</a></li>
-				<li style="background-image: url(/images/lib/nav_bg2.jpg);"><a href="" title="">前端开发</a></li>
-				<li style="background-image: url(/images/lib/nav_bg3.jpg);"><a href="" title="">留言板</a></li>
-			</ul>
-		</nav>-->
-	<!--	<header id="header">
-			<a href="/index"><i class="iconfont icon-arrowleft"></i></a>
-			<i class="fl iconfont icon-bars"></i>
+		<header id="header">
+			<a href="javascript:;" onClick="javascript :history.back();"><i class="fl iconfont icon-arrowleft"></i></a>
+			<!--<i class="fl iconfont icon-bars"></i>-->
 			妖邪之灵个人博客
 			<i class="fr iconfont icon-close"></i>
-		</header>-->
-
-		<header id="author_header">
-			<a href="/index"><i class="iconfont icon-arrowleft"></i></a>
-			<img src="/images/lib/img_head.png" alt="">
 		</header>
-		<!-- /header -->
-		<section class="author-info">
-			<div class="fl"><span>38</span>文章总量</div>
-			<div class="fr"><span>380</span>写作天数</div>
-			<div class="cf">妖邪之灵<p>你要相信：越努力，越幸运。</p></div>
-		</section>
 
 		<!-- /header -->
 		<section class="content article-content">
 			<section class="article-info cf">
 				<a class="author-index" href="#"><img class="fl" src="/images/lib/img_head.png"></a>
 				<div class="">
-					<span class="author">何彪</span>
-					<span class="fr date">2016-11-20</span>
-					<span class="tag">[Javascript]</span>
+					<span class="author" th:text="${list.author}"></span>
+					<span class="fr date" th:text="${list.gtmmodified}">2016-11-20</span>
+				    <span class="tag" th:text="${list.typename}"></span>
 				</div>
 			</section>
 			<!-- article-info end -->
 			<section class="article-detile">
-				<h2>HTML5 placeholder属性兼容IE9及以下浏览器的用法</h2>
-				<div class="article-text">
-					<p>说起HTML5，相信大家已经都不在陌生了，一些HTML5的新方法，也被越来越多的浏览器认可，极大的方便了我们这些开发人员。但是有些公司可能还沉醉在IE,6，7，8，9等早期浏览器当中不能自拔，这让一些想用HTML5开发的程序员头疼不已，毕竟兼容问题自浏览器存在以来就亘古长存了。</p>
-					<p>今天小呆想分享的是关于HTML5 placeholder属性兼容IE9及以下浏览器的用法，如果你还不会使用placeholder,可以阅读小萌之前的文章《input placeholder的用法》话不多说，上代码。</p>
-					<div class="code-pretty-container">
-						<pre class="prettyprint linenums lang-css prettyprinted"><ol class="linenums"><li class="L0"><span class="com">/* 用来写兼容时的文字颜色 */</span></li><li class="L1"><span class="pun">.</span><span class="pln">placeholder</span><span class="pun">{</span></li><li class="L2"><span class="pln">    color</span><span class="pun">:#</span><span class="lit">323232</span><span class="pun">;</span></li><li class="L3"><span class="pun">}</span></li></ol></pre>
-					    <div class="code-pretty-toolbar">
-					    	<span class="title">CSS</span>
-					    </div>
-					</div>
-					<!-- code-pretty-container end -->
-					<div class="code-pretty-container"><pre class="prettyprint linenums lang-javascript prettyprinted">
-						<ol class="linenums"><li class="L0"><span class="kwd">if</span><span class="pun">(!</span><span class="pln">_this</span><span class="pun">.</span><span class="pln">placeholderSupport</span><span class="pun">()){</span></li><li class="L1"><span class="pln">    $</span><span class="pun">(</span><span class="str">'[placeholder]'</span><span class="pun">).</span><span class="pln">focus</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L2"><span class="pln">        </span><span class="kwd">var</span><span class="pln"> input </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">);</span></li><li class="L3"><span class="pln">        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">input</span><span class="pun">.</span><span class="pln">val</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> input</span><span class="pun">.</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'placeholder'</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span></li><li class="L4"><span class="pln">            input</span><span class="pun">.</span><span class="pln">val</span><span class="pun">(</span><span class="str">''</span><span class="pun">);</span></li><li class="L5"><span class="pln">            input</span><span class="pun">.</span><span class="pln">removeClass</span><span class="pun">(</span><span class="str">'placeholder'</span><span class="pun">);</span></li><li class="L6"><span class="pln">        </span><span class="pun">}</span></li><li class="L7"><span class="pln">    </span><span class="pun">}).</span><span class="pln">blur</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L8"><span class="pln">        </span><span class="kwd">var</span><span class="pln"> input </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">);</span></li><li class="L9"><span class="pln">        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">input</span><span class="pun">.</span><span class="pln">val</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="str">''</span><span class="pln"> </span><span class="pun">||</span><span class="pln"> input</span><span class="pun">.</span><span class="pln">val</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> input</span><span class="pun">.</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'placeholder'</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span></li><li class="L0"><span class="pln">            input</span><span class="pun">.</span><span class="pln">addClass</span><span class="pun">(</span><span class="str">'placeholder'</span><span class="pun">);</span></li><li class="L1"><span class="pln">            input</span><span class="pun">.</span><span class="pln">val</span><span class="pun">(</span><span class="pln">input</span><span class="pun">.</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'placeholder'</span><span class="pun">));</span></li><li class="L2"><span class="pln">        </span><span class="pun">}</span></li><li class="L3"><span class="pln">    </span><span class="pun">}).</span><span class="pln">blur</span><span class="pun">();</span></li><li class="L4"><span class="pun">};</span></li><li class="L5"><span class="kwd">function</span><span class="pln"> placeholderSupport</span><span class="pun">(){</span></li><li class="L6"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="str">'placeholder'</span><span class="pln"> in document</span><span class="pun">.</span><span class="pln">createElement</span><span class="pun">(</span><span class="str">'input'</span><span class="pun">);</span><span class="pln"> </span><span class="com">//textarea也是支持的</span></li><li class="L7"><span class="pun">}</span></li></ol></pre><div class="code-pretty-toolbar"><span class="title">JavaScript</span><a href="javascript:void(0);" title="复制代码" class="tool clipboard"><i class="iconfont icon-fuzhi"></i></a><a href="javascript:void(0);" title="查看纯文本代码" class="tool view-source"><i class="iconfont icon-code"></i></a><a href="javascript:void(0);" title="返回代码高亮" class="tool back-to-pretty"><i class="iconfont icon-fanhui"></i></a><span class="msg"></span></div></div>
-					<!-- code-pretty-container end -->
-					<h1>placeholder属性兼容IE9及以下浏览器的用法</h1>
-					<h2>placeholder属性兼容IE9及以下浏览器的用法</h2>
-					<h3>placeholder属性兼容IE9及以下浏览器的用法</h3>
-					<h4>placeholder属性兼容IE9及以下浏览器的用法</h4>
-					<h5>placeholder属性兼容IE9及以下浏览器的用法</h5>
-					<h6>placeholder属性兼容IE9及以下浏览器的用法</h6>
+				<h2 th:text="${list.typename}"></h2>
+				<div class="article-text" th:utext=" ${list.content}">
+
+
 				</div>
 				<!-- article-txt end -->
 				<div class="qrcode">
 					<img src="/images/lib/qrcode_01.jpg" alt="">
 					觉得本文不错，打赏作者。
 				</div>
-				<p class="article-prev">【上一篇】: HTML5中 audio标签的样式修改</p>
-				<p class="article-next">【下一篇】: 没有了，已经是最新文章</p>
+				<p class="article-prev">【上一篇】: <a  th:href="@{/main/findAuthorDetails.do?cid={cid}(cid=${ondata.cid})}"    th:text="${ondata.title}"    th:title="${ondata.title}"></a></p>
+				<p class="article-next">【下一篇】: <a  th:href="@{/main/findAuthorDetails.do?cid={cid}(cid=${underData.cid})}"    th:text="${underData.title}" th:title="${underData.title}"></a></p>
 			</section>
 			<!-- article-detile end -->
 
@@ -119,6 +71,5 @@
 		<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
 		<script type="text/javascript" src="/js/prettify.js"></script>
 		<script type="text/javascript" src="/js/article.js"></script>
-		<!--<script type="text/javascript" src="/js/index.js"></script>-->
 	</body>
 </html>

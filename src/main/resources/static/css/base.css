@@ -106,7 +106,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 .icon-search:before { content: "\e64c"; }
 
 .content{
-  margin-top: 0.557rem;
+  margin-top: 2.857rem;
   background: #fff;
 }
 

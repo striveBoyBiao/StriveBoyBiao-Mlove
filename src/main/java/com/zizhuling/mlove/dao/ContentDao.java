@@ -14,24 +14,10 @@ import java.util.Map;
 @Mapper
 public interface ContentDao {
     /**查询忙里偷闲*/
-    List<Map<String,Object>> findDoing(Map<String,Object> map);
-    int queryCount(Map<String,Object> map);
+    List<Map<String,Object>> findAuthor(Map<String,Object> map);
+    /**查询详细数据*/
+    List<Map<String,Object>> findAuthorDetails(Map<String,Object> map);
 
-    /**查询慢生活数据*/
-    List<Map<String,Object>> findLife(Map<String,Object> map);
-    List<Map<String,Object>> findlifeDetails(Map<String,Object> map);
-
-
-    /**查询数据数量*/
-    int queryLifeCount(Map<String,Object> map);
-    /**查询最新文章*/
-    List<Map<String,Object>> findLifeNewsData(Map<String,Object> map);
-    /**查询最新排行*/
-    List<Map<String,Object>> findLifeRankData(Map<String,Object> map);
-    /**查询相关文章*/
-    List<Map<String,Object>> findLifeRelateData(Map<String,Object> map);
-    /**查询推荐文章*/
-    List<Map<String,Object>> findRecommendData(Map<String,Object> map);
 
 
     /**查询上一篇文章*/
@@ -40,8 +26,4 @@ public interface ContentDao {
     Map<String,Object> findLifeUnderData(Map<String,Object> map);
     /**修改阅读量*/
     void updateClickRate(Map<String,Object> map);
-    /**查询图片*/
-    List<Map<String,Object>> queryFiles(Map<String,Object> map);
-    /**查询图片数量*/
-    int queryFilesCount(Map<String,Object> map);
 }
